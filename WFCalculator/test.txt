@@ -1,0 +1,13 @@
+namespace WFCalculator {
+    public partial class Buttons : Form {
+        public Buttons() {
+            InitializeComponent();
+        }
+
+        // on awake
+        private void Form1_Load(object sender, EventArgs e) {
+            InputReset(textBox_main);
+            InputReset(textBox_res);
+        }
+    }
+}

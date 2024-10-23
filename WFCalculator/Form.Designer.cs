@@ -1,6 +1,6 @@
 ﻿namespace WFCalculator
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -26,8 +26,7 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             components = new System.ComponentModel.Container();
             button_7 = new Button();
             button_8 = new Button();
@@ -49,6 +48,11 @@
             button_tan = new Button();
             checkBox_qm = new CheckBox();
             button_backspace = new Button();
+            button_flip = new Button();
+            button_divide = new Button();
+            button_multiply = new Button();
+            button_minus = new Button();
+            button_plus = new Button();
             SuspendLayout();
             // 
             // button_7
@@ -165,7 +169,7 @@
             // 
             textBox_res.BorderStyle = BorderStyle.FixedSingle;
             textBox_res.Font = new Font("Segoe UI", 20F);
-            textBox_res.Location = new Point(166, 12);
+            textBox_res.Location = new Point(202, 12);
             textBox_res.Name = "textBox_res";
             textBox_res.Size = new Size(80, 43);
             textBox_res.TabIndex = 11;
@@ -213,7 +217,7 @@
             // button_sin
             // 
             button_sin.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button_sin.Location = new Point(141, 73);
+            button_sin.Location = new Point(202, 73);
             button_sin.Name = "button_sin";
             button_sin.Size = new Size(58, 34);
             button_sin.TabIndex = 16;
@@ -223,7 +227,7 @@
             // button_cos
             // 
             button_cos.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button_cos.Location = new Point(141, 113);
+            button_cos.Location = new Point(202, 113);
             button_cos.Name = "button_cos";
             button_cos.Size = new Size(58, 34);
             button_cos.TabIndex = 17;
@@ -233,7 +237,7 @@
             // button_tan
             // 
             button_tan.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button_tan.Location = new Point(141, 153);
+            button_tan.Location = new Point(202, 153);
             button_tan.Name = "button_tan";
             button_tan.Size = new Size(58, 34);
             button_tan.TabIndex = 18;
@@ -255,7 +259,7 @@
             // button_backspace
             // 
             button_backspace.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            button_backspace.Location = new Point(141, 193);
+            button_backspace.Location = new Point(202, 193);
             button_backspace.Name = "button_backspace";
             button_backspace.Size = new Size(58, 34);
             button_backspace.TabIndex = 20;
@@ -263,12 +267,72 @@
             button_backspace.UseVisualStyleBackColor = true;
             button_backspace.Click += button_backspace_Click;
             // 
+            // button_flip
+            // 
+            button_flip.Font = new Font("Segoe UI Light", 10F);
+            button_flip.Location = new Point(147, 21);
+            button_flip.Name = "button_flip";
+            button_flip.Size = new Size(41, 28);
+            button_flip.TabIndex = 21;
+            button_flip.Text = "←";
+            button_flip.UseVisualStyleBackColor = true;
+            button_flip.Click += button_flip_Click;
+            // 
+            // button_divide
+            // 
+            button_divide.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button_divide.Location = new Point(141, 73);
+            button_divide.Name = "button_divide";
+            button_divide.Size = new Size(37, 34);
+            button_divide.TabIndex = 22;
+            button_divide.Text = "÷";
+            button_divide.UseVisualStyleBackColor = true;
+            button_divide.Click += button_divide_Click;
+            // 
+            // button_multiply
+            // 
+            button_multiply.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button_multiply.Location = new Point(141, 113);
+            button_multiply.Name = "button_multiply";
+            button_multiply.Size = new Size(37, 34);
+            button_multiply.TabIndex = 23;
+            button_multiply.Text = "*";
+            button_multiply.UseVisualStyleBackColor = true;
+            button_multiply.Click += button_multiply_Click;
+            // 
+            // button_minus
+            // 
+            button_minus.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button_minus.Location = new Point(141, 153);
+            button_minus.Name = "button_minus";
+            button_minus.Size = new Size(37, 34);
+            button_minus.TabIndex = 24;
+            button_minus.Text = "-";
+            button_minus.UseVisualStyleBackColor = true;
+            button_minus.Click += button_minus_Click;
+            // 
+            // button_plus
+            // 
+            button_plus.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            button_plus.Location = new Point(141, 193);
+            button_plus.Name = "button_plus";
+            button_plus.Size = new Size(37, 34);
+            button_plus.TabIndex = 25;
+            button_plus.Text = "+";
+            button_plus.UseVisualStyleBackColor = true;
+            button_plus.Click += button_plus_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(257, 253);
+            ClientSize = new Size(294, 253);
+            Controls.Add(button_plus);
+            Controls.Add(button_minus);
+            Controls.Add(button_multiply);
+            Controls.Add(button_divide);
+            Controls.Add(button_flip);
             Controls.Add(button_backspace);
             Controls.Add(checkBox_qm);
             Controls.Add(button_tan);
@@ -290,7 +354,7 @@
             Controls.Add(button_7);
             Name = "Form1";
             Text = "Calculator";
-            Load += Form1_Load;
+            Load += Form_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -316,5 +380,10 @@
         private Button button_tan;
         private CheckBox checkBox_qm;
         private Button button_backspace;
+        private Button button_flip;
+        private Button button_divide;
+        private Button button_multiply;
+        private Button button_minus;
+        private Button button_plus;
     }
 }
