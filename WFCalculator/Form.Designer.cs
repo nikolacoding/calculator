@@ -322,7 +322,7 @@
             button_plus.UseVisualStyleBackColor = true;
             button_plus.Click += button_plus_Click;
             // 
-            // Form1
+            // Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -352,7 +352,7 @@
             Controls.Add(button_9);
             Controls.Add(button_8);
             Controls.Add(button_7);
-            Name = "Form1";
+            Name = "Form";
             Text = "Calculator";
             Load += Form_Load;
             ResumeLayout(false);
