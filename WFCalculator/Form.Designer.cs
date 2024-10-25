@@ -160,6 +160,7 @@
             textBox_main.Font = new Font("Segoe UI", 20F);
             textBox_main.Location = new Point(12, 12);
             textBox_main.Name = "textBox_main";
+            textBox_main.ReadOnly = true;
             textBox_main.Size = new Size(123, 43);
             textBox_main.TabIndex = 10;
             textBox_main.Text = "6*10*3";
@@ -352,9 +353,12 @@
             Controls.Add(button_9);
             Controls.Add(button_8);
             Controls.Add(button_7);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            KeyPreview = true;
             Name = "Form";
             Text = "Calculator";
             Load += Form_Load;
+            KeyDown += Form_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -13,5 +13,9 @@ namespace WFCalculator
             InputReset(textBox_main);
             InputReset(textBox_res);
         }
+
+        private void textBox_main_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
